@@ -10,7 +10,7 @@ interface SidebarProps {
 const Sidebar = ({ isCollapsed }: SidebarProps) => {
   return (
     <div
-      className={`flex flex-col bg-card h-screen transition-all duration-300 ease-in-out ${isCollapsed ? "w-20" : "w-64"} shrink-0`}
+      className={`flex flex-col bg-card min-h-screen transition-all duration-300 ease-in-out ${isCollapsed ? "w-20" : "w-64"} shrink-0`}
     >
       {/* Logo  */}
       <Logo isCollapsed={isCollapsed} />

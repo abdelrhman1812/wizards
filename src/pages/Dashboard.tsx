@@ -1,7 +1,8 @@
+import RegistryActivityChart from "../components/dashboard/charts/RegistryActivityChart";
+import WizardsBySpecialtyChart from "../components/dashboard/charts/WizardsBySpecialtyChart";
 import KPICards from "../components/dashboard/KPICards";
+import MasterWizardRegistry from "../components/dashboard/MasterWizardRegistry/MasterWizardRegistry";
 import PageTitle from "../components/dashboard/PageTitle";
-import RegistryActivityChart from "../components/dashboard/RegistryActivityChart";
-import WizardsBySpecialtyChart from "../components/dashboard/WizardsBySpecialtyChart";
 
 const Dashboard = () => {
   return (
@@ -18,6 +19,7 @@ const Dashboard = () => {
           <WizardsBySpecialtyChart />
         </div>
       </div>
+      <MasterWizardRegistry />
     </div>
   );
 };
