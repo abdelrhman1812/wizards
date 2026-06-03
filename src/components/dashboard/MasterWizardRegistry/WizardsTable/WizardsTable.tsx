@@ -5,7 +5,12 @@ import WizardElixirs from "./wizardElixirs";
 import WizardTableBodyTD from "./WizardTableBodyTD";
 import WizardTableHead from "./WizardTableHead";
 
-const WizardsTable = ({ data }) => {
+interface WizardsTableProps {
+  data: WizardT[];
+  onView: () => void;
+}
+
+const WizardsTable = ({ data, onView }: WizardsTableProps) => {
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-left border-collapse">
@@ -28,7 +33,11 @@ const WizardsTable = ({ data }) => {
                   )}
                 </td>
                 <td className="px-6 py-5 text-right whitespace-nowrap">
-                  <button className="text-slate-400 hover:text-slate-200 transition-colors p-2 rounded-full hover:bg-white/5">
+                  <button
+                    onClick={onView}
+                    className="text-slate-400 hover:text-slate-200 transition-colors p-2 rounded-full hover:bg-white/5"
+                    title="View wizard details"
+                  >
                     <Eye className="w-5 h-5 mx-auto" />
                   </button>
                 </td>

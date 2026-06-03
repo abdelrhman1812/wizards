@@ -5,6 +5,7 @@ import { useDebounce } from "../../../hooks/useDebounce";
 const useMasterWizardRegistry = () => {
   const [searchTerm, setSearchTermState] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [isDetailOpen, setIsDetailOpen] = useState(false);
 
   const pageSize = 4;
 
@@ -28,6 +29,14 @@ const useMasterWizardRegistry = () => {
     setCurrentPage(page);
   }, []);
 
+  const openDetail = useCallback(() => {
+    setIsDetailOpen(true);
+  }, []);
+
+  const closeDetail = useCallback(() => {
+    setIsDetailOpen(false);
+  }, []);
+
   return {
     searchTerm,
     setSearchTerm,
@@ -38,6 +47,9 @@ const useMasterWizardRegistry = () => {
     pageSize,
     isPending,
     error,
+    isDetailOpen,
+    openDetail,
+    closeDetail,
   };
 };
 

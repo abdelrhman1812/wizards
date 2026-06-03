@@ -3,6 +3,7 @@ import type { KPIT } from "../../types/kpi.types";
 
 const kpiData: KPIT[] = [
   {
+    id: "1",
     title: "TOTAL REGISTERED WIZARDS",
     value: "1,248",
     description: "+4% from last moon",
@@ -11,6 +12,7 @@ const kpiData: KPIT[] = [
     descriptionColor: "text-primary",
   },
   {
+    id: "2",
     title: "ACTIVE ELIXIRS",
     value: "856",
     description: "24 new formulas registered",
@@ -19,6 +21,7 @@ const kpiData: KPIT[] = [
     descriptionColor: "text-primary",
   },
   {
+    id: "3",
     title: "PENDING VERIFICATIONS",
     value: "12",
     description: "Requires High-Council approval",
@@ -31,11 +34,11 @@ const kpiData: KPIT[] = [
 const KPICards = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
-      {kpiData.map((kpi, index) => {
+      {kpiData.map((kpi) => {
         const Icon = kpi.icon;
         return (
           <div
-            key={index}
+            key={kpi.id}
             className="p-6 border border-[#4944544D] rounded-xl bg-background/80 flex flex-col justify-between"
             style={{
               boxShadow: "0 25px 50px -12px #00000040",

@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const WizardTableBodyTD = ({
   color,
   content,
@@ -8,4 +10,4 @@ const WizardTableBodyTD = ({
   return <td className={`px-6 py-5 whitespace-nowrap ${color}`}>{content}</td>;
 };
 
-export default WizardTableBodyTD;
+export default memo(WizardTableBodyTD);
