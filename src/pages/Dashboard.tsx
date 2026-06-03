@@ -1,11 +1,5 @@
-import TopBar from "../components/layouts/TopBar";
-
 const Dashboard = () => {
-  return (
-    <>
-      <TopBar />
-    </>
-  );
+  return <>Dashboard</>;
 };
 
 export default Dashboard;

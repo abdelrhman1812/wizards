@@ -1,6 +1,10 @@
-import { Bell, Search, Settings } from "lucide-react";
+import { Bell, Menu, Search, Settings } from "lucide-react";
 
-const TopBar = () => {
+const TopBar = ({
+  handleToggleSidebar,
+}: {
+  handleToggleSidebar: () => void;
+}) => {
   return (
     <nav
       className="flex items-center justify-between px-4 md:px-10 border-b h-16"
@@ -13,11 +17,17 @@ const TopBar = () => {
     >
       {/* left side */}
       <div className="flex items-center gap-x-4 md:gap-x-20 h-8">
+        <button
+          onClick={handleToggleSidebar}
+          className="md:hidden text-foreground hover:text-primary transition-colors"
+        >
+          <Menu size={24} />
+        </button>
         <h1 className="text-lg md:text-2xl font-bold text-primary">
           Wizarding Registry
         </h1>
 
-        {/* search - desktop only */}
+        {/* search */}
         <div className="hidden md:block w-64 h-9 relative">
           <Search
             className="absolute text-foreground left-2 top-1/2 -translate-y-1/2"
