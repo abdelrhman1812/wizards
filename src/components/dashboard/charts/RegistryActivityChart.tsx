@@ -5,7 +5,6 @@ import {
   ResponsiveContainer,
   Tooltip,
   XAxis,
-  YAxis,
 } from "recharts";
 
 const data = [
@@ -51,7 +50,9 @@ const RegistryActivityChart = () => {
               interval="preserveStartEnd"
               dy={15}
             />
-            <YAxis hide domain={[0, "dataMax + 10"]} />
+            {/* <YAxis hide domain={[0, "dataMax + 10"]} /> */}
+            {/* <YAxis hide /> */}
+
             <Tooltip
               cursor={{ fill: "#1e293b", opacity: 0.4 }}
               contentStyle={{
