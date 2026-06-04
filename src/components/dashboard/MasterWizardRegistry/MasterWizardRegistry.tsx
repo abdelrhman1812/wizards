@@ -1,9 +1,13 @@
+import { lazy, Suspense } from "react";
+import { WizardsTableSkeleton } from "../../Skeleton/WizardsTableSkeleton";
 import Pagination from "../../ui/Pagination";
 import HeaderMasterWizardSection from "./HeaderMasterWizardSection";
 import useMasterWizardRegistry from "./useMasterWizardRegistry";
-import WizardDetailModal from "./WizardDetailModal/WizardDetailModal";
 import WizardsTable from "./WizardsTable/WizardsTable";
 
+const WizardDetailModal = lazy(
+  () => import("./WizardDetailModal/WizardDetailModal"),
+);
 export default function MasterWizardRegistry() {
   const {
     searchTerm,
@@ -33,7 +37,7 @@ export default function MasterWizardRegistry() {
 
         {isPending ? (
           <div className="p-8 text-center text-muted-foreground">
-            Loading data...
+            <WizardsTableSkeleton />
           </div>
         ) : error ? (
           <div className="p-8 text-center text-[#ffaaa5]">
@@ -54,7 +58,11 @@ export default function MasterWizardRegistry() {
         )}
       </div>
 
-      {isDetailOpen && <WizardDetailModal onClose={closeDetail} />}
+      {isDetailOpen && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <WizardDetailModal onClose={closeDetail} />
+        </Suspense>
+      )}
     </>
   );
 }

@@ -35,17 +35,17 @@ const WizardsTable = ({ data, onView }: WizardsTableProps) => {
                 <td className="px-6 py-5 text-right whitespace-nowrap">
                   <button
                     onClick={onView}
-                    className="text-slate-400 hover:text-slate-200 transition-colors p-2 rounded-full hover:bg-white/5"
+                    className="  hover:text-slate-200 cursor-pointer transition-colors p-2 rounded-full hover:bg-white/5"
                     title="View wizard details"
                   >
-                    <Eye className="w-5 h-5 mx-auto" />
+                    <Eye className="w-6 h-6 mx-auto" />
                   </button>
                 </td>
               </tr>
             ))
           ) : (
             <tr>
-              <td colSpan={5} className="px-6 py-8 text-center text-slate-500">
+              <td colSpan={5} className="px-6 py-8 text-center ">
                 No wizards found.
               </td>
             </tr>
