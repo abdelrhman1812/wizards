@@ -10,7 +10,7 @@ export const useWizards = (params?: Params) => {
   const { data, isPending, error } = useGetData({
     url: endPoints.getAllWizards,
     queryKeys: [queryKeys.wizards, params],
-    params,
+    params: params as Record<string, string>,
   });
   return { data, isPending, error };
 };

@@ -14,7 +14,7 @@ const WizardsBySpecialtyChart = lazy(
 );
 const Dashboard = () => {
   return (
-    <div className="p-4 sm:p-8">
+    <main className=" sm:p-8">
       <PageTitle />
       <div className="mb-6">
         <KPICards />
@@ -35,7 +35,7 @@ const Dashboard = () => {
       <Suspense fallback={<div>Loading...</div>}>
         <MasterWizardRegistry />
       </Suspense>
-    </div>
+    </main>
   );
 };
 

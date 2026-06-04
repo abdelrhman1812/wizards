@@ -1,5 +1,5 @@
-import { memo } from "react";
 import { Filter, Search } from "lucide-react";
+import { memo } from "react";
 
 const HeaderMasterWizardSection = ({
   searchTerm,
@@ -9,7 +9,7 @@ const HeaderMasterWizardSection = ({
   setSearchTerm: (term: string) => void;
 }) => {
   return (
-    <div className="p-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4 border-b border-white/5">
+    <div className="p-2 sm:p-6 flex flex-col md:flex-row md:justify-between md:items-center gap-4 border-b border-white/5">
       <h3 className="text-xl font-medium">Master Wizard Registry</h3>
 
       <div className="flex items-center h-10 border border-white/20 rounded-md bg-white/5 overflow-hidden">

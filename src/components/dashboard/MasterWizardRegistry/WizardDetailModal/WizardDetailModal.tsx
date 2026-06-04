@@ -19,7 +19,7 @@ const WizardDetailModal = memo(({ onClose }: WizardDetailModalProps) => {
       onClick={onClose}
     >
       <div
-        className="relative bg-[#0D1C2D] w-full max-w-[1000px] rounded-2xl border border-[#D0BCFF4D] overflow-visible"
+        className="relative bg-[#0D1C2D] h-[650px] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-500 sm:overflow-hidden sm:h-auto w-full max-w-[1000px] rounded-2xl border border-[#D0BCFF4D] overflow-visible"
         style={{
           boxShadow: "0 32px 64px -12px rgba(0,0,0,0.7)",
         }}

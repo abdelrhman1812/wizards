@@ -1,6 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-
-export const useGetData = ({ url, queryKeys, params = {} }) => {
+import { useQuery, type QueryKey } from "@tanstack/react-query";
+interface ParamsT {
+  url: string;
+  queryKeys: QueryKey;
+  params?: Record<string, string>;
+}
+export const useGetData = ({ url, queryKeys, params = {} }: ParamsT) => {
   return useQuery({
     queryKey: [...queryKeys],
     queryFn: async () => {

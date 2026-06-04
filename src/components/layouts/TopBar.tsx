@@ -7,7 +7,7 @@ const TopBar = ({
 }) => {
   return (
     <nav
-      className="flex items-center justify-between px-4 md:px-10 border-b h-16"
+      className="flex items-center justify-between px-4 md:px-10 border-b h-16 sticky top-0 z-50"
       style={{
         backgroundColor: "rgba(5, 20, 36, 0.8)",
         borderColor: "rgba(73, 68, 84, 0.3)",

@@ -8,8 +8,8 @@ const WizardElixirs = ({
   index: number;
 }) => {
   return (
-    <div className="flex flex-wrap gap-2">
-      {wizard.elixirs.map((elixir) => {
+    <div className="flex flex-wrap gap-2 w-50 md:w-full">
+      {wizard?.elixirs?.map((elixir) => {
         const elixirColor =
           index % 2 === 0
             ? "bg-[#EE98001A] border border-[#EE980033] text-primary"

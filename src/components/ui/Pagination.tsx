@@ -26,8 +26,8 @@ const Pagination = ({
   const endIndex = Math.min(currentPage * pageSize, totalRecords);
 
   return (
-    <div className="flex justify-between items-center px-6 py-4 border-t border-[#4944544D]">
-      <p className="text-sm text-slate-300">
+    <div className="flex flex-col sm:flex-row justify-between items-center px-6 py-4 border-t border-[#4944544D]">
+      <p className="text-sm text-slate-300 mb-2 sm:mb-0">
         Showing {startIndex}-{endIndex} of {totalRecords} Records
       </p>
 
